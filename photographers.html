@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/photographers/photographers-profil.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <script type="module" src="js/application.js"></script>
+  </head>
+  <body>
+    <header role="banner">
+      <a href="index.html" title="HomePage"
+        ><img
+          src="https://res.cloudinary.com/dps3eww2i/image/upload/v1609005020/P6-img/logo.png"
+          alt="FishEye Home Page"
+      /></a>
+    </header>
+    <main>
+      <!-- HEADER -->
+      <header id="photo-profil" aria-label="photographer information">
+        <section id="photo_profil__header"></section>
+      </header>
+
+      <!-- DROPDOWN -->
+      <div class="works-sort">
+        <span id="sort-text">Trier par</span>
+        <div id="sort-wrapper">
+          <button class="sort-btn" aria-haspopup="listbox">Popularité</button>
+          <span
+            class="fas fa-chevron-down arrow-down-open"
+            role="button"
+          ></span>
+          <ul class="hidden-sort" role="listbox">
+            <li class="sort" role="option">
+              Popularité <span class="fas fa-chevron-up arrow-up-close"></span>
+            </li>
+            <li class="sort" role="option">Date</li>
+            <li class="sort" role="option">Titre</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="ph-works" aria-label="photographer works"></section>
+      <!-- BOX -->
+      <div id="box" aria-label="photographer likes and price"></div>
+      <div class="contact-modal">
+        <form class="contact-modal-content">
+          <span id="close"></span>
+          <h1>
+            Contactez-moi <br />
+            <span id="modal-photograph-name"></span>
+          </h1>
+          <!-- FIRST NAME -->
+          <div
+            class="formData"
+            data-error="Vous devez entrer votre prénom."
+            data-error-visible="false"
+          >
+            <label for="first_name">Prénom</label>
+            <input
+              type="text"
+              name="Prénom"
+              placeholder="Prénom"
+              id="first_name"
+              aria-labelledby="First name"
+            />
+          </div>
+          <!-- LAST NAME -->
+          <div
+            class="formData"
+            data-error="Vous devez entrer votre nom."
+            data-error-visible="false"
+          >
+            <label for="last_name">Nom</label>
+            <input
+              type="text"
+              name="Nom"
+              placeholder="Nom"
+              id="last_name"
+              aria-labelledby="Last name"
+            />
+          </div>
+          <!-- EMAIL -->
+          <div
+            class="formData"
+            data-error="Vous devez entrer un email valide."
+            data-error-visible="false"
+          >
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="exemple@email.com"
+              id="email"
+              aria-labelledby="Email"
+            />
+          </div>
+          <!-- MESSAGE -->
+          <div
+            class="formData"
+            data-error="Vous devez entrer votre message."
+            data-error-visible="false"
+          >
+            <label for="message">Votre message</label>
+            <textarea
+              name="message"
+              placeholder="Votre message"
+              id="message"
+              cols="15"
+              aria-labelledby="Your message"
+            ></textarea>
+          </div>
+          <button class="btn_primary --dark" type="submit" title="Send">
+            Envoyer
+          </button>
+        </form>
+      </div>
+      <!--LIGHTBOX-->
+      <aside id="works-lightbox" aria-hidden="true">
+        <article id="lightbox-body" role="dialog">
+          <span
+            class="fas fa-times close-lightbox-icon"
+            role="button"
+            title="Close dialog"
+          ></span>
+          <span
+            class="fas fa-chevron-left left-arrow-lightbox"
+            role="button"
+            title="Previous image"
+          ></span>
+          <span
+            class="fas fa-chevron-right right-arrow-lightbox"
+            role="button"
+            title="Next image"
+          ></span>
+          <div id="works-lightbox-media" src="medias/Ellie-Rose/Sport_Next_Hold.jpg"></div>
+          <div id="works-lightbox-name"></div>
+        </article>
+      </aside>
+    </main>
+  </body>
+</html>
