@@ -1,0 +1,26 @@
+.tag{
+  /* width: 70px; */
+  background-color: var(--white);
+  color: var(--primary);
+  padding: 3px 5px;
+  border-radius: 50px;  
+  margin-top: 5px;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid var(--grey);
+  transition: all 0.4s;
+  text-transform: capitalize;
+}
+.tag:hover{
+  background-color: var(--primary);
+  color: var(--white);
+  transition: all 0.4s;
+  cursor: pointer;
+}
+.actived {
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  transition: all 0.4s;
+  cursor: pointer;
+}
