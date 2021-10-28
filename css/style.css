@@ -1,0 +1,150 @@
+@import 'components/button.css';
+@import 'components/tag.css';
+@import url(https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap);
+
+html {
+  font-family: 'DM Sans', sans-serif;
+}
+body{
+  --primary: #901C1C;
+  --secondary: #D3573C;
+  --hover-color: #DB8876;
+  --grey: #525252;
+  --white: #FAFAFA;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li{
+  list-style: none;
+  list-style-type: none;
+}
+header{
+  display: flex;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+}
+header a:not(ul a)  {
+  width: 17%;
+  margin-right: 5px;
+}
+header img{
+  width: 100%;
+}
+nav{
+  width: 50%;
+}
+.filters ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1{
+  font-size: 2em;
+  font-weight: 100;
+  color:  var(--primary);
+}
+#photographers{
+  padding-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  row-gap: 40px;
+}
+.photographer-profil{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.photographer-profil a{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photographer-profil img{
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.photographer-profil a h2{
+  font-size: 2.3em;
+  text-align: center;
+  font-weight: 400;
+  color: var(--secondary);
+  margin-bottom: 0px;
+}
+.photographer-profil .location{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.photographer-profil .tagline{
+  margin-top: 0px;
+  font-size: .8em;
+  margin-bottom: 5px;
+}
+.photographer-profil .price{
+  font-size: 0.8em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: var(--grey);
+}
+.phtags{
+  display: flex;
+  justify-content: center;
+}
+
+.phtags .tag{
+  margin-right: 5px;
+}
+@media screen and (max-width: 1188px) {
+  .filters ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 900px) {
+  header{
+    flex-direction: column;
+  }
+  header a:not(ul a){
+    width: 50%;
+  }
+  header h1{
+    margin: 0px;
+  }
+  .filters{
+    padding-left: 0px;
+    width: 100%;
+  }
+  .filters ul{
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .tag{
+    margin-right: 3px;
+    margin-bottom: 3px;
+  }
+  #photographers{
+    flex-direction: column;   
+    align-items: center;
+  }
+  .photographer-profil{
+    width: 100%;
+  }
+  .phtags{
+    margin: 8px 0px;
+    padding: 0px;
+  }
+}
