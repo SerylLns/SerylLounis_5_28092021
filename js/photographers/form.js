@@ -12,7 +12,7 @@ export default class Form {
       e.preventDefault();
       if (this.validate()) {
         form.parentElement.style.display = "none";
-        console.group("Message de contact");
+        console.group("Message de contact :");
         console.log("Prénom : " + this.first_name.value);
         console.log("Nom : " + this.last_name.value);
         console.log("Email : " + this.email.value);
@@ -48,6 +48,7 @@ export default class Form {
     }
   }
   checkEmail(element) {
+    // check email is valid
     const regex =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (element.value.trim().match(regex)) {
@@ -61,6 +62,7 @@ export default class Form {
   }
 
   checkMessage(element) {
+    // check message is not empty
     if (element.value.trim() === "" || element.value.trim() == null) {
       element.parentElement.setAttribute("data-error-visible", "true");
       element.style.border = "2px solid #e54858";
