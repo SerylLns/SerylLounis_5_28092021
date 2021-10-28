@@ -1,8 +1,10 @@
 export default class filterTags{
   init() {
+    // get all tags and all articles 
     let articles = document.querySelectorAll(".photographer-profil");
     let tags = document.querySelectorAll(".tag");
     tags.forEach((tag) => {
+      // if tag is clicked toggle class actived
       tag.addEventListener("click", (e) => {
         let tagsSelect = [];
         tags.forEach((t) => { if (t.dataset.filter == tag.dataset.filter) tagsSelect.push(t); });
@@ -20,6 +22,7 @@ export default class filterTags{
   }
 
   findActiveFilter() {
+    // find tag active
     let currentFilter = document.querySelectorAll('ul li.actived');
     let filterSelected = [];
     currentFilter.forEach((filter) => {
@@ -27,7 +30,9 @@ export default class filterTags{
     });
     return filterSelected;
   }
+
   checkArticle(article) {
+    // check if article contain tags
     let filters = this.findActiveFilter();
     let classes = article.classList.value.split(" ");
     let result = [];
@@ -40,6 +45,7 @@ export default class filterTags{
   }
 
   displayArticle(articles) {
+    // hide or display articles with correct tags
     articles.forEach((article) => {
       if (this.checkArticle(article)) {
         article.style.display = "flex";
