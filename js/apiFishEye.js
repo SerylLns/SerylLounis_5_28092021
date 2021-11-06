@@ -1,7 +1,7 @@
 // GET THE DATA FROM api/database.json (PHOTOGRAPHERS & MEDIAS)
 class ApiFishEye {
   async getDataFishEye() {
-    let url = `/api/database.json`;
+    let url = `https://seryllns.github.io/SerylLounis_5_28092021/api/database.json`;
     let response = await fetch(url);
     let data = await response.json();
 
