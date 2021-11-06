@@ -1,4 +1,4 @@
-// GET THE DATA FROM database.json (PHOTOGRAPHERS & MEDIAS)
+// GET THE DATA FROM api/database.json (PHOTOGRAPHERS & MEDIAS)
 class ApiFishEye {
   async getDataFishEye() {
     let url = "../api/database.json";
