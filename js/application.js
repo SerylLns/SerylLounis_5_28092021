@@ -20,3 +20,9 @@ import SortInput from "./photographers/sortInput.js";
     }
   })
 })();
+
+document.addEventListener("keydown", (key) => {
+  if (key.code == "Enter") {
+    console.log(key.target.children[0].click());
+  }
+ })

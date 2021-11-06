@@ -90,14 +90,12 @@ export default class LightBox {
 
       // ESCAPE TO CLOSE
       if (key.code == "Escape") {
-        console.log("escape");
         let lightBox = document.getElementById("works-lightbox");
         lightBox.style.display = "none";
       }
 
       // ARROW RIGHT TO STEP RIGHT
       else if (key.code == "ArrowRight") {
-        console.log("right");
         this.currentIndex += 1;
 
         if (this.currentIndex > currentMediaName.length - 1) {
@@ -113,7 +111,6 @@ export default class LightBox {
 
       // ARROW LEFT TO STEP LEFT
       else if (key.code == "ArrowLeft") {
-        console.log("left");
         this.currentIndex -= 1;
 
         if (this.currentIndex < 0) {
