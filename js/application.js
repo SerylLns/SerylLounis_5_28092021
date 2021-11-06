@@ -9,7 +9,7 @@ import SortInput from "./photographers/sortInput.js";
     if (window.location.pathname.includes("photographers")) { 
       new PhotographerProfil().displayPhotographerProfil(data);
       
-       new SortInput().displayFilter(data);
+      new SortInput().displayFilter(data);
 
       new MediaBuilder().photographersMedias(data);
 
@@ -21,8 +21,9 @@ import SortInput from "./photographers/sortInput.js";
   })
 })();
 
+// key Enter == click 
 document.addEventListener("keydown", (key) => {
   if (key.code == "Enter") {
-    console.log(key.target.children[0].click());
+    key.target.children[0].click();
   }
  })
